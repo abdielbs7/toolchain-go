@@ -32,7 +32,15 @@ cd toolchain-go
     ```
     This will create the Docker image and generate a script called `linux-golang`.
 
-2. Compile the project:
+   
+3. Alternatively, you can use:
+    ```bash
+    make IMAGE_NAME=<name>
+    ```
+    This will create a Docker image named <name> and generate a script called <name>.
+    
+
+4. Compile the project:
     ```bash
     ./linux-golang "go build -o /work/info-os test/main.go"
     ```
@@ -92,7 +100,13 @@ cd toolchain-go
     ```
     Esto creará la imagen Docker y generará un script llamado `linux-golang`.
 
-2. Compilar el proyecto:
+3. Alternativamente, puedes usar:
+   ```bash
+    make IMAGE_NAME=<name>
+    ```
+    Esto creará una imagen de Docker llamada <nombre> y generará un script llamado <nombre>.
+
+5. Compilar el proyecto:
     ```bash
     ./linux-golang "go build -o /work/info-os test/main.go"
     ```
