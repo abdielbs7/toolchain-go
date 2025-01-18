@@ -37,7 +37,7 @@ cd toolchain-go
     ```bash
     make IMAGE_NAME=<name>
     ```
-    This will create a Docker image named <name> and generate a script called <name>.
+    This will create a Docker image named `name` and generate a script called `name`.
     
 
 4. Compile the project:
@@ -104,7 +104,7 @@ cd toolchain-go
    ```bash
     make IMAGE_NAME=<name>
     ```
-    Esto creará una imagen de Docker llamada <nombre> y generará un script llamado <nombre>.
+    Esto creará una imagen de Docker llamada `name` y generará un script llamado `name`.
 
 5. Compilar el proyecto:
     ```bash
