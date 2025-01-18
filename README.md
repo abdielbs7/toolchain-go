@@ -42,6 +42,11 @@ cd toolchain-go
 
 - Ensure Docker has access to the working directory. On macOS and Windows systems, you can configure this in Docker Desktop -> Preferences -> Resources -> File Sharing.
 - You can modify the Dockerfile and Makefile according to your specific needs.
+- Technical Note: If you encounter an error similar to cannot find package, make sure you are in the correct directory before running the build command. For example:
+Use the following command to change to the correct directory before compiling:
+```bash
+./linux-golang "cd <path-your-project> && go build -o /work/<binary-name>"
+```
 
 ## Contributions
 
@@ -97,6 +102,11 @@ cd toolchain-go
 
 - Asegúrate de que Docker tenga acceso al directorio de trabajo. En sistemas macOS y Windows, puedes configurar esto en Docker Desktop -> Preferences -> Resources -> File Sharing.
 - Puedes modificar el Dockerfile y el Makefile según tus necesidades específicas.
+- Nota Técnica: Si encuentras un error similar a cannot find package, asegúrate de estar en el directorio correcto antes de ejecutar el comando de compilación. Por ejemplo:
+Usa el siguiente comando para cambiar al directorio correcto antes de compilar:
+```bash
+./linux-golang "cd <path-your-project> && go build -o /work/<binary-name>"
+```
 
 ## Contribuciones
 
