@@ -7,26 +7,26 @@ import (
 )
 
 func main() {
-	// Obtener el sistema operativo
+	// Get the operating system
 	os := runtime.GOOS
-	// Obtener la arquitectura
+	// Get the architecture
 	arch := runtime.GOARCH
 
-	// Ejecutar el comando 'hostname' para obtener el nombre del host
+	// Execute the 'hostname' command to get the host name
 	cmd := exec.Command("hostname")
 	output, err := cmd.Output()
 	if err != nil {
-		fmt.Printf("Error ejecutando el comando 'hostname': %v\n", err)
+		fmt.Printf("Error executing 'hostname' command: %v\n", err)
 		return
 	}
 
-	// Convertir la salida a string y eliminar el salto de línea
+	// Convert the output to a string and remove the newline
 	host := string(output)
 	host = host[:len(host)-1]
 
-	// Imprimir la información del sistema en un formato bonito
-	fmt.Printf("Ejecución correcta desde:\n")
-	fmt.Printf("Sistema Operativo: %s\n", os)
-	fmt.Printf("Arquitectura: %s\n", arch)
-	fmt.Printf("Nombre del Host: %s\n", host)
+	// Print the system information in a nice format
+	fmt.Printf("Successfully executed from:\n")
+	fmt.Printf("Operating System: %s\n", os)
+	fmt.Printf("Architecture: %s\n", arch)
+	fmt.Printf("Host Name: %s\n", host)
 }
