@@ -1,13 +1,13 @@
 FROM golang
 
-ENV DEFAULT_DOCKCROSS_IMAGE=linux-armv5-golang-rm8
+ENV DEFAULT_DOCKCROSS_IMAGE=linux-golang
 
-# Crear directorio de trabajo
+# Create working directory
 WORKDIR /work
 
-# Copia el proyecto al contenedor
+# Copy the project to the container
 COPY . /work/
 
-# Establecer variables de entorno para la compilación cruzada si la nesesitas
+# Set environment variables for cross-compilation if needed
 ENV GOARCH=amd64 \
     CGO_ENABLED=0
