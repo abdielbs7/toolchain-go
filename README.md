@@ -1,5 +1,3 @@
----
-
 # toolchain-go
 
 **Streamline your Go development with this Docker setup.**
