@@ -1,7 +1,7 @@
-# Nombre de la imagen Docker (por defecto)
+# Default Docker image name
 IMAGE_NAME ?= linux-golang
 
-# Regla para construir la imagen Docker
+# Rule to build the Docker image
 build:
 	@echo "Building $(IMAGE_NAME) Docker image..."
 	docker build -t $(IMAGE_NAME) . && \
@@ -11,5 +11,5 @@ build:
 	chmod +x ./$(IMAGE_NAME) && \
 	echo "Script created successfully: ./$(IMAGE_NAME)"
 
-# Regla por defecto
+# Default rule
 all: build
